@@ -10,15 +10,20 @@ pip install -r requirements.txt
 
 ## Run linear regression experiment
 ```shell
-./run_linear_experiment.sh
+./scripts/run_linear_experiment.sh
 ```
 ## Run Cifar10 logistic regression experiment
 ```shell
-./run_cifar10_experiment.sh
+./scripts/run_cifar10_experiment.sh
+```
+
+## Run Cifar10 WideResNet-16-4 experiment
+```shell
+./scripts/run_cifar_cvx_iterations_nonconvex.sh
 ```
 
 ## Run LDP experiment
 ```shell
-./run_linear_ldp_experiment.sh
+./scripts/run_linear_ldp_experiment.sh
 ```
 
