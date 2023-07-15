@@ -2,13 +2,13 @@
 
 
 This is the official repository for our paper 
-[Optimal Differentially Private Learning with Public Data](https://arxiv.org/abs/2306.15056) by [Andrew Lowy](https://sites.google.com/view/andrewlowy/home), Zeman Li, [Tianjian Huang](https://tianjian-huang.net/), and [Meisam Razaviyayn](https://sites.usc.edu/razaviyayn/). 
+[Optimal Differentially Private Learning with Public Data](https://arxiv.org/abs/2306.15056) by [Andrew Lowy](https://sites.google.com/view/andrewlowy/home), [Zeman Li](https://sites.google.com/usc.edu/zemanli/), [Tianjian Huang](https://tianjian-huang.net/), and [Meisam Razaviyayn](https://sites.usc.edu/razaviyayn/). 
 
 ## Abstract
 Differential Privacy (DP) ensures that training a machine learning model does not leak private data. However, the cost of DP is lower model accuracy or higher sample complexity. In practice, we may have access to auxiliary public data that is free of privacy concerns. This has motivated the recent study of what role public data might play in improving the accuracy of DP models. In this work, we assume access to a given amount of public data and settle the following fundamental open questions: 
 
 1. What is the optimal (worst-case) error of a DP model trained over a private data set while having access to side public data? What algorithms are optimal? 
-2. How can we harness public data to improve DP model training in practice?* We consider these questions in both the local and central models of DP. 
+2. How can we harness public data to improve DP model training in practice? We consider these questions in both the local and central models of DP. 
 
 To answer the first question, we prove tight (up to constant factors) lower and upper bounds that characterize the optimal error rates of three fundamental problems: mean estimation, empirical risk minimization, and stochastic convex optimization. We prove that public data reduces the sample complexity of DP model training. Perhaps surprisingly, we show that the optimal error rates can be attained (up to constants) by either discarding private data and training a public model, or treating public data like it's private data and using an optimal DP algorithm. To address the second question, we develop novel algorithms which are "even more optimal" (i.e. better constants) than the asymptotically optimal approaches described above. For local DP mean estimation with public data, our algorithm is **optimal including constants**. Empirically, our algorithms show benefits over existing approaches for DP model training with side access to public data. 
 
@@ -96,7 +96,7 @@ Similiar to ["Run linear regression experiment"](#run-linear-regression-experime
 `--optimizer`: The differential private optimizer to use. (default: `semi_ldp`) 
 
 - `semi_ldp`: The optimizer (**Algorithm 3**) proposed in our paper. If `semi_ldp` is used, also need to specify `--semi_dp_beta`. 
-- `ldp`: The ldp optimizer tha takes total dataset as private. 
+- `ldp`: The ldp optimizer that takes total dataset as private. 
 - `throw_away_sgd`: The SGD optimizer which only trains on public data and throws away private data. 
 
 ### Common Differential Privacy Options
